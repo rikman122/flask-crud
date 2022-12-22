@@ -1,4 +1,4 @@
-# flask-crud
+# CRUD Flask Server
 
 Simple Flask based server to access MariaDB
 
