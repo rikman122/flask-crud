@@ -17,6 +17,8 @@ def create_app(enviroment):
         db.init_app(app)
         db.create_all()
 
+    print("Created")
+
     return app
 
 enviroment = config['production']
@@ -57,4 +59,4 @@ def delete_bill():
     return jsonify({'bill': bill.json() })
 
 if __name__ == '__main__':
-    app.run(debug=False, port=os.environ.get('SERVER_PORT'))
+    app.run(debug=False)
