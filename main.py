@@ -17,8 +17,6 @@ def create_app(enviroment):
         db.init_app(app)
         db.create_all()
 
-    print("Created")
-
     return app
 
 enviroment = config['production']
