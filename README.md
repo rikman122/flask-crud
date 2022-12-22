@@ -29,3 +29,22 @@ pip install -r requirements.txt
 ```
 gunicorn -c gunicorn.conf.py main:app
 ```
+
+## Run as a service
+
+1. Copy flask-crud.service and modify paths acording to your directory:
+```
+/etc/systemd/system/flask-crud.service
+```
+2. Start Service:
+```
+sudo systemctl start flask-crud
+```
+3. Enable Service on startup:
+```
+sudo systemctl enable flask-crud
+```
+4. Check Service status:
+```
+sudo systemctl status flask-crud
+```

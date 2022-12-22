@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance to serve flask-crud
+After=network.target
+
+[Service]
+User=root
+Group=www-data
+WorkingDirectory=/home/flask-crud
+Environment="PATH=/home/flask-crud/venv/bin"
+ExecStart=/home/flask-crud/venv/bin/gunicorn -c /home/flask-crud/gunicorn.conf.py main:app
+
+[Install]
+WantedBy=multi-user.target
